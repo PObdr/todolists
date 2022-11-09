@@ -1,4 +1,4 @@
-# Seznam povinností
+# Seznamy povinností
 
 Taky vždycky v pondělí zjišťujete, co všechno jste měli udělat do konce minulého týden a nestihli? S touhle aplikací si můžete jednoduše zapsat a odškrtat všechny povinnosti včas a bez problémů. 
 
@@ -32,9 +32,17 @@ Grafické rozhraní bude vzdušné a jednoduché, aby byly seznamy přehledné a
 ## Technická specifikace
 
 ### Datový logický model
+Při uložení dojde k uložení jednotlivých úkolů do tabulky tasks, a jejich spojeni přes list_ID s konkrétním uživatelem a seznamem. Ve chvíli, kdy kdokoliv použije aktivní odkaz, bude mu vytvořena kopie již existujících úkolů v sadě, se kterou dále může pokračovat v práci (pokud není zároveň autorem původní sady).
 
 ### Popis architektury a jejích jednotlivých částí.
+Základem bude čistý JavaScript bez dalších knihoven, který zajistí nejen vytvoření konkrétního úkolu, ale i případné přihlášení uživatele, vygenerování odkazu a uložení zadaných dat.
 
 #### Popis tříd včetně základních funkcí, které by měly dané třídy plnit
+Projekt bude vytvořen podle MVC architektury.
+- Model zajišťuje vlastnosti všech úkolů
+- View obhospodařuje, kdy a za jakých podmínek se mají které úkoly zobrazit 
+- Controller obsahuje hlavní funkce (přidání, zaškrtnutí, odebrání úkolu)
+
 
 #### Použité technologie a funkčnosti jednotlivých částí aplikace (např. html stránek, sekcí aplikace z pohledu uživatele apod.)
+Pokusím se použít pouze JavaScript v jeho objektové podobě, bez dalších frameworků. 
